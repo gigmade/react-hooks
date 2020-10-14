@@ -1,0 +1,77 @@
+{
+  "name": "@gigmade/react-hooks",
+  "version": "0.1.0",
+  "description": "Collection of useful hooks",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "babel": {
+    "presets": [
+      "@babel/preset-react",
+      "@babel/preset-env"
+    ]
+  },
+  "watch": {
+    "build": "src/*"
+  },
+  "lint-staged": {
+    "*.{js,md}": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "scripts": {
+    "build": "cross-env rimraf dist && NODE_ENV=production babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
+    "build:watch": "npm-watch",
+    "test": "react-scripts test"
+  },
+  "eslintConfig": {
+    "extends": "react-app",
+    "rules": {
+      "import/no-extraneous-dependencies": 2
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
+    "cross-env": "^7.0.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.2.11",
+    "npm-watch": "^0.7.0",
+    "prettier": "^2.0.5",
+    "react": "^16.13.0",
+    "rimraf": "^3.0.2"
+  },
+  "peerDependencies": {
+    "react": ">= 16.8"
+  },
+  "author": "gigmade ltd (https://www.gigmade.com)",
+  "homepage": "",
+  "license": "MIT",
+  "repository": "",
+  "dependencies": {}
+}
