@@ -1,12 +1,13 @@
 import { useState, useEffect, useMemo, useCallback } from 'react'
 
 export default (sharedIds = false) => {
-  const [disagreementIds, setLockedIds] = useState(null)
+  // Wrap in { set } to make the set addition and deletion behave like immutable.
+  const [disagreementIds, setLockedIds] = useState({ set: null })
 
   // `sharedIds` is a static parameter and shouldn't change during consensus
   // negotiation. If it does, we reset the consensus first.
   useEffect(() => {
-    setLockedIds(new Set())
+    setLockedIds({ set: new Set() })
   }, [sharedIds])
 
   const disagreement = useMemo(() => {
@@ -19,9 +20,16 @@ export default (sharedIds = false) => {
       // We still add an optional 'reason' for debugging.
       const uniqueId = sharedIds ? id : { reason: id }
 
-      setLockedIds((set) => set.add(uniqueId))
+      setLockedIds((set) => {
+        set.add(uniqueId)
+        return { set }
+      })
 
-      return () => setLockedIds((set) => set.delete(uniqueId))
+      return () =>
+        setLockedIds((set) => {
+          set.delete(uniqueId)
+          return { set }
+        })
     },
     [sharedIds]
   )
