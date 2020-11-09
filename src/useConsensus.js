@@ -11,7 +11,7 @@ export default (sharedIds = false) => {
   }, [sharedIds])
 
   const disagreement = useMemo(() => {
-    return disagreementIds && disagreementIds.set.size > 0
+    return disagreementIds?.set?.size > 0
   }, [disagreementIds])
 
   const disagree = useCallback(
