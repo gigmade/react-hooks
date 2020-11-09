@@ -11,7 +11,7 @@ export default (sharedIds = false) => {
   }, [sharedIds])
 
   const disagreement = useMemo(() => {
-    return disagreementIds && disagreementIds.size > 0
+    return disagreementIds && disagreementIds.set.size > 0
   }, [disagreementIds])
 
   const disagree = useCallback(
@@ -20,14 +20,14 @@ export default (sharedIds = false) => {
       // We still add an optional 'reason' for debugging.
       const uniqueId = sharedIds ? id : { reason: id }
 
-      setLockedIds((set) => {
-        set.add(uniqueId)
+      setLockedIds((disagreementIds) => {
+        disagreementIds.set.add(uniqueId)
         return { set }
       })
 
       return () =>
-        setLockedIds((set) => {
-          set.delete(uniqueId)
+        setLockedIds((disagreementIds) => {
+          disagreementIds.set.delete(uniqueId)
           return { set }
         })
     },
