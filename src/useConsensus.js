@@ -42,7 +42,7 @@ export default (sharedIds = false) => {
 
       setLockedIds((iSet) => iSet.add(uniqueId))
 
-      return () => setLockedIds((disagreementIds) => iSet.delete(uniqueId))
+      return () => setLockedIds((iSet) => iSet.delete(uniqueId))
     },
     [sharedIds]
   )
