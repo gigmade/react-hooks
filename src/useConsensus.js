@@ -1,23 +1,26 @@
 import { useState, useEffect, useMemo, useCallback } from 'react'
 
 /*
- * Pretend this is immutable
+ * Poor man's immutable set implementation.
  */
 function ISet() {
   const set = new Set()
-  return {
-    add(item) {
-      set.add(item)
-      return { set }
-    },
-    delete(item) {
-      set.delete(item)
-      return { set }
-    },
-    size() {
-      return set.size
-    },
+
+  function add(item) {
+    set.add(item)
+    return newSet()
   }
+
+  function del(item) {
+    set.delete(item)
+    return newSet()
+  }
+
+  function newSet() {
+    return { add, delete: del, size: set.size }
+  }
+
+  return newSet()
 }
 
 export default (sharedIds = false) => {
