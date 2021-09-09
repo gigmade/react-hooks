@@ -23,7 +23,7 @@ function ISet() {
   return newSet()
 }
 
-export default (sharedIds = false) => {
+export default function useConsensus(sharedIds = false) {
   // Wrap in { set } to make the set addition and deletion behave like immutable.
   const [disagreementIds, setLockedIds] = useState(ISet())
 

@@ -1,7 +1,7 @@
 import { useCallback, useRef } from 'react'
 import { useLayoutEffect } from 'react-layout-effect'
 
-function useEventCallback(fn, dependencies) {
+export default function useEventCallback(fn, dependencies) {
   const ref = useRef(() => {
     throw new Error('Cannot call an eventCallback handler while rendering.')
   })
@@ -19,5 +19,3 @@ function useEventCallback(fn, dependencies) {
     [ref]
   )
 }
-
-export default useEventCallback
