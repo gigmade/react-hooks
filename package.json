@@ -8,9 +8,10 @@
     "dist"
   ],
   "babel": {
+    "comments": false,
     "presets": [
-      "@babel/preset-react",
-      "@babel/preset-env"
+      "@babel/preset-env",
+      "@babel/preset-react"
     ]
   },
   "watch": {
