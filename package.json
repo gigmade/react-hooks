@@ -33,7 +33,7 @@
     "singleQuote": true
   },
   "scripts": {
-    "build": "cross-env rimraf dist && NODE_ENV=production babel --extensions '.js,.jsx,.ts,.tsx' --source-maps --out-dir dist src",
+    "build": "cross-env rimraf dist && NODE_ENV=production babel --extensions '.js,.jsx,.ts,.tsx' --source-maps --out-dir dist src --copy-files \"**/*.json\"",
     "build:watch": "npm-watch",
     "test": "react-scripts test"
   },
