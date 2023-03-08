@@ -64,13 +64,17 @@
     "cross-env": "^7.0.3",
     "husky": "^4.3.7",
     "lint-staged": "^10.5.4",
+    "lodash": "4.17.21",
     "npm-watch": "^0.11.0",
     "prettier": "^2.8.1",
     "react": "^17.0.1",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "use-debounce": "8.0.4"
   },
   "peerDependencies": {
-    "react": "^17.0.1"
+    "lodash": "4.17.21",
+    "react": "^17.0.1",
+    "use-debounce": "8.0.4"
   },
   "author": "gigmade ltd (https://www.gigmade.com)",
   "homepage": "",
