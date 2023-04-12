@@ -1,6 +1,6 @@
 {
   "name": "@gigmade/react-hooks",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Collection of useful hooks",
   "main": "dist/index.js",
   "module": "dist/index.js",
