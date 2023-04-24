@@ -12,12 +12,12 @@ type TISet = {
 function ISet(): TISet {
   const set = new Set()
 
-  function add(item) {
+  function add(item: any) {
     set.add(item)
     return newSet()
   }
 
-  function del(item) {
+  function del(item: any) {
     set.delete(item)
     return newSet()
   }
