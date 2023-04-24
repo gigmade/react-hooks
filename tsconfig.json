@@ -1,0 +1,3 @@
+{
+  "extends": "bebbi-scripts/tsconfig.json"
+}

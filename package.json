@@ -1,23 +1,22 @@
 {
   "name": "@gigmade/react-hooks",
-  "version": "0.1.8",
+  "version": "0.2.0",
   "description": "Collection of useful hooks",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "default": "./dist/cjs/index.js",
+      "development": "./src/index.ts",
+      "production": "./dist/cjs/index.js"
+    }
+  },
   "files": [
     "dist"
   ],
-  "babel": {
-    "comments": false,
-    "presets": [
-      "@babel/preset-env",
-      "@babel/preset-typescript",
-      "@babel/preset-react"
-    ]
-  },
-  "watch": {
-    "build": "src/*"
-  },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,md}": [
       "prettier --write"
@@ -32,43 +31,28 @@
     "semi": false,
     "singleQuote": true
   },
-  "scripts": {
-    "build": "cross-env rimraf dist && NODE_ENV=production babel --extensions '.js,.jsx,.ts,.tsx' --source-maps --out-dir dist src --copy-files \"**/*.json\"",
-    "build:watch": "npm-watch",
-    "test": "react-scripts test"
-  },
   "eslintConfig": {
     "extends": "react-app",
     "rules": {
       "import/no-extraneous-dependencies": 2
     }
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "scripts": {
+    "clean": "bebbi-scripts clean",
+    "build": "bebbi-scripts build",
+    "watch": "bebbi-scripts build --watch",
+    "test": "bebbi-scripts test",
+    "format": "bebbi-scripts format",
+    "lint": "bebbi-scripts lint",
+    "validate": "bebbi-scripts validate",
+    "prepare": "husky install"
   },
   "devDependencies": {
-    "@babel/cli": "^7.18.10",
-    "@babel/core": "~7.19.1",
-    "@babel/preset-env": "~7.19.1",
-    "@babel/preset-react": "^7.18.6",
-    "@babel/preset-typescript": "^7.18.6",
-    "cross-env": "^7.0.3",
-    "husky": "^4.3.7",
-    "lint-staged": "^10.5.4",
+    "bebbi-scripts": "workspace:^",
+    "husky": "^8.0.0",
     "lodash": "4.17.21",
-    "npm-watch": "^0.11.0",
     "prettier": "^2.8.1",
     "react": "^17.0.1",
-    "rimraf": "^3.0.2",
     "use-debounce": "8.0.4"
   },
   "peerDependencies": {
@@ -76,11 +60,11 @@
     "react": "^17.0.1",
     "use-debounce": "8.0.4"
   },
+  "dependencies": {
+    "react-layout-effect": "^1.0.5"
+  },
   "author": "gigmade ltd (https://www.gigmade.com)",
   "homepage": "",
   "license": "MIT",
-  "repository": "",
-  "dependencies": {
-    "react-layout-effect": "^1.0.5"
-  }
+  "repository": ""
 }
