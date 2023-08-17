@@ -51,7 +51,7 @@
     "bebbi-scripts": "workspace:^",
     "husky": "^8.0.0",
     "lodash": "4.17.21",
-    "prettier": "^2.8.1",
+    "prettier": "^2.8.8",
     "react": "^18.2.0",
     "use-debounce": "8.0.4"
   },
