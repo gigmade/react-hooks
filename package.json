@@ -49,7 +49,7 @@
   },
   "devDependencies": {
     "bebbi-scripts": "workspace:^",
-    "husky": "^8.0.0",
+    "husky": "^8.0.3",
     "lodash": "4.17.21",
     "prettier": "^2.8.8",
     "react": "^18.2.0",
