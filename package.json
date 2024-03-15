@@ -1,6 +1,6 @@
 {
   "name": "@gigmade/react-hooks",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Collection of useful hooks",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -17,10 +17,7 @@
       },
       "development": "./src/index.ts",
       "production": "./dist/cjs/index.js",
-      "default": {
-        "default": "./dist/cjs/index.js",
-        "types": "./dist/types/index.d.ts"
-      }
+      "default": "./dist/cjs/index.js"
     }
   },
   "files": [
