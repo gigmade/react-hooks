@@ -1,14 +1,20 @@
 {
   "name": "@gigmade/react-hooks",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Collection of useful hooks",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/types/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/esm/index.js",
-      "require": "./dist/cjs/index.js",
+      "import": {
+        "default": "./dist/esm/index.js",
+        "types": "./dist/types/index.d.ts"
+      },
+      "require": {
+        "default": "./dist/cjs/index.js",
+        "types": "./dist/types/index.d.ts"
+      },
       "default": "./dist/cjs/index.js",
       "development": "./src/index.ts",
       "production": "./dist/cjs/index.js"
@@ -48,7 +54,7 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "bebbi-scripts": "^0.4.3",
+    "bebbi-scripts": "^0.4.4",
     "husky": "^8.0.3",
     "lodash": "4.17.21",
     "prettier": "^2.8.8",
