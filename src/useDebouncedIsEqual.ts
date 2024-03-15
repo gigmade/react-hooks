@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import isEqual from 'lodash/isEqual'
+import { isEqual } from './isEqual'
 import { useDebouncedCallback } from 'use-debounce'
 
 export default function useDebouncedIsEqual(
