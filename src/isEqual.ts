@@ -72,7 +72,7 @@ export function isEqual(obj1: Jsonable, obj2: Jsonable) {
     }
 
     for (let i = 0, l = obj1.length; i < l; i++)
-      if (!equal(obj1[i], obj2[i])) {
+      if (!isEqual(obj1[i], obj2[i])) {
         return false
       }
 
@@ -96,7 +96,7 @@ export function isEqual(obj1: Jsonable, obj2: Jsonable) {
         return false
       }
 
-      if (!equal(obj2[key], obj1[key])) {
+      if (!isEqual(obj2[key], obj1[key])) {
         return false
       }
     }
