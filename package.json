@@ -54,9 +54,8 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "bebbi-scripts": "^0.4.4",
+    "bebbi-scripts": "^0.4.7",
     "husky": "^8.0.3",
-    "prettier": "^3.2.2",
     "react": "^18.2.0",
     "use-debounce": "8.0.4"
   },
