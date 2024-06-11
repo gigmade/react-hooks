@@ -53,7 +53,7 @@ export default function useConsensus(sharedIds: boolean = false) {
 
       return () => setLockedIds((iSet) => iSet.delete(uniqueId))
     },
-    [sharedIds]
+    [sharedIds],
   )
 
   // Explanation:

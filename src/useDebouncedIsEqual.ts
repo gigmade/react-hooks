@@ -5,7 +5,7 @@ import { useDebouncedCallback } from 'use-debounce'
 export default function useDebouncedIsEqual(
   item1: any,
   item2: any,
-  delay: number
+  delay: number,
 ): boolean {
   const [identical, setIdentical] = useState(false)
 
