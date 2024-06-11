@@ -8,12 +8,6 @@ export type Jsonable =
   | boolean
   | null
 
-export type TJsonPathValue = {
-  path: string
-  value: Jsonable
-  marker?: 'v' | '^'
-}
-
 export const NUMBER = 'number'
 export const BOOLEAN = 'boolean'
 export const NULL = 'null'
@@ -24,7 +18,7 @@ export const OBJECT = 'object'
 export const STRUCTURES = [ARRAY, OBJECT]
 
 function getType(
-  obj?: Jsonable
+  obj?: Jsonable,
 ): (typeof PRIMITIVES)[number] | (typeof STRUCTURES)[number] | undefined {
   const type = typeof obj
 
