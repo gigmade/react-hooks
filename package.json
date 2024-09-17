@@ -1,6 +1,6 @@
 {
   "name": "@gigmade/react-hooks",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Collection of useful hooks",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -64,6 +64,7 @@
     "use-debounce": "8.0.4"
   },
   "dependencies": {
+    "@gigmade/utils": "^0.1.0",
     "react-layout-effect": "^1.0.5"
   },
   "author": "gigmade ltd (https://www.gigmade.com)",
