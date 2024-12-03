@@ -2,22 +2,14 @@
   "name": "@gigmade/react-hooks",
   "version": "0.4.1",
   "description": "Collection of useful hooks",
-  "main": "dist/cjs/index.js",
+  "type": "module",
+  "main": "dist/cjs/index.cjs",
   "module": "dist/esm/index.js",
   "types": "dist/types/index.d.ts",
   "exports": {
     ".": {
-      "import": {
-        "types": "./dist/types/index.d.ts",
-        "default": "./dist/esm/index.js"
-      },
-      "require": {
-        "types": "./dist/types/index.d.ts",
-        "default": "./dist/cjs/index.js"
-      },
-      "development": "./src/index.ts",
-      "production": "./dist/cjs/index.js",
-      "default": "./dist/cjs/index.js"
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.cjs"
     }
   },
   "files": [
@@ -54,7 +46,7 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "bebbi-scripts": "^0.4.7",
+    "bebbi-scripts": "^0.5.8",
     "husky": "^8.0.3",
     "react": "^18.2.0",
     "use-debounce": "8.0.4"
@@ -64,7 +56,7 @@
     "use-debounce": "8.0.4"
   },
   "dependencies": {
-    "@gigmade/utils": "^0.1.0",
+    "@gigmade/utils": "^0.1.2",
     "react-layout-effect": "^1.0.5"
   },
   "author": "gigmade ltd (https://www.gigmade.com)",
