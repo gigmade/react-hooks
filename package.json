@@ -1,6 +1,6 @@
 {
   "name": "@gigmade/react-hooks",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Collection of useful hooks",
   "type": "module",
   "main": "dist/cjs/index.cjs",
