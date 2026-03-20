@@ -16,16 +16,6 @@
   "files": [
     "dist"
   ],
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx,md}": [
-      "prettier --write"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "scripts": {
     "clean": "bebbi-scripts clean",
     "build": "bebbi-scripts build",
@@ -33,12 +23,10 @@
     "test": "bebbi-scripts test",
     "format": "bebbi-scripts format",
     "lint": "bebbi-scripts lint",
-    "validate": "bebbi-scripts validate",
-    "prepare": "husky install"
+    "validate": "bebbi-scripts validate"
   },
   "devDependencies": {
     "bebbi-scripts": "workspace:^",
-    "husky": "^8.0.3",
     "react": "^18.2.0",
     "use-debounce": "8.0.4"
   },
