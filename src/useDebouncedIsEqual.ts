@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react'
 import { isEqual } from '@gigmade/utils'
+import { useEffect, useState } from 'react'
 import { useDebouncedCallback } from 'use-debounce'
 
 export default function useDebouncedIsEqual(

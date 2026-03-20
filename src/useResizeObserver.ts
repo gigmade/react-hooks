@@ -7,7 +7,7 @@ const usePassiveLayoutEffect =
       : 'useEffect'
   ]
 
-const useLatest = <T extends any>(current: T) => {
+const useLatest = <T>(current: T) => {
   const storedValue = React.useRef(current)
   React.useEffect(() => {
     storedValue.current = current
