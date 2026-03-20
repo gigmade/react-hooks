@@ -26,16 +26,6 @@
       "pre-commit": "lint-staged"
     }
   },
-  "prettier": {
-    "semi": false,
-    "singleQuote": true
-  },
-  "eslintConfig": {
-    "extends": "react-app",
-    "rules": {
-      "import/no-extraneous-dependencies": 2
-    }
-  },
   "scripts": {
     "clean": "bebbi-scripts clean",
     "build": "bebbi-scripts build",
