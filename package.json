@@ -3,27 +3,13 @@
   "version": "0.4.2",
   "description": "Collection of useful hooks",
   "type": "module",
-  "main": "dist/cjs/index.cjs",
-  "module": "dist/esm/index.js",
-  "types": "dist/types/index.d.ts",
+  "main": "./src/index.ts",
   "exports": {
-    ".": {
-      "types": "./dist/types/index.d.ts",
-      "import": "./dist/esm/index.js",
-      "require": "./dist/cjs/index.cjs"
-    }
+    ".": "./src/index.ts"
   },
-  "files": [
-    "dist"
-  ],
   "scripts": {
-    "clean": "bebbi-scripts clean",
-    "build": "bebbi-scripts build",
-    "watch": "bebbi-scripts build --watch",
     "test": "bebbi-scripts test",
-    "format": "bebbi-scripts format",
-    "lint": "bebbi-scripts lint",
-    "validate": "bebbi-scripts validate"
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "bebbi-scripts": "workspace:^",
