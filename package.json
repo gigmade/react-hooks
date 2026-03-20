@@ -8,11 +8,9 @@
     ".": "./src/index.ts"
   },
   "scripts": {
-    "test": "bebbi-scripts test",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "bebbi-scripts": "workspace:^",
     "react": "^18.2.0",
     "use-debounce": "8.0.4"
   },
