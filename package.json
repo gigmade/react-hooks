@@ -8,6 +8,7 @@
   "types": "dist/types/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/types/index.d.ts",
       "import": "./dist/esm/index.js",
       "require": "./dist/cjs/index.cjs"
     }
@@ -46,7 +47,7 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "bebbi-scripts": "^0.5.8",
+    "bebbi-scripts": "workspace:^",
     "husky": "^8.0.3",
     "react": "^18.2.0",
     "use-debounce": "8.0.4"
