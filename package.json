@@ -35,7 +35,7 @@
     "use-debounce": "8.0.4"
   },
   "dependencies": {
-    "@gigmade/utils": "^0.1.2",
+    "@gigmade/utils": "workspace:^",
     "react-layout-effect": "^1.0.5"
   },
   "author": "gigmade ltd (https://www.gigmade.com)",
